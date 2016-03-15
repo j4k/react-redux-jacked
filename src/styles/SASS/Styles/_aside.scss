@@ -1,0 +1,27 @@
+// !ASIDE
+
+.site-aside {
+
+  @include mq( $to: desktopSmall ) {
+
+    margin-top: 20px;
+
+  }
+
+  @include mq( $from: desktopSmall ) {
+
+    width: 220px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+
+  }
+
+}
+
+.aside__article {
+
+  padding: 0.25em;
+  border: 1px solid $cs-grey-light;
+
+}

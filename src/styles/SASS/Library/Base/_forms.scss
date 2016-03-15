@@ -1,0 +1,49 @@
+@if $use-forms == true {
+
+// !FORMS
+
+  fieldset {
+
+    border: 0;
+    margin: 0;
+    padding: 0;
+
+  }
+
+  textarea {
+
+    resize: vertical;
+
+  }
+
+  // Source: https://github.com/inuitcss/base.forms
+
+  label {
+
+    display: block;
+
+  }
+
+
+  // Extra help text displayed after a field when that field is in focus, e.g.:
+
+  // <label for=email>Email:</label>
+  // <input type=email class=text-input id=email>
+  // <small class=extra-help>.edu emails only</small>
+
+
+  .extra-help {
+
+    display: inline-block;
+    visibility: hidden;
+
+  }
+
+  .text-input:active + .extra-help,
+  .text-input:focus + .extra-help {
+
+    visibility: visible;
+
+  }
+
+}

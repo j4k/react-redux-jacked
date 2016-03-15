@@ -1,0 +1,36 @@
+@if $use-button == true {
+
+// !BUTTON
+
+  .btn {
+      display: inline-block;
+      vertical-align: middle;
+      white-space: nowrap;
+      font-family: inherit;        
+      font-size: 100%;
+      cursor: pointer;
+      border: none;
+      margin: 0;
+      padding-top:   0;
+      padding-bottom:0;
+      line-height: 3;
+      padding-right: 1em;
+      padding-left:  1em;
+
+  }
+
+  .btn {
+
+      &,
+      &:hover {
+          text-decoration: none;
+      }
+
+      &:active,
+      &:focus {
+          outline: none;
+      }
+
+  }
+
+}

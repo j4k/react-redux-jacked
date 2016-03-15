@@ -1,0 +1,50 @@
+// !MAIN
+
+.sidebar {
+
+  float: left;
+  width: 220px;
+  margin: 20px 20px 20px 0;
+
+}
+
+.site-content {
+
+  float: right;
+  position: relative;
+  width: 720px;
+  margin: 0 0 20px 0;
+  min-height: 280px;
+  font-size: 0.8em;
+  color: $cs-grey;
+
+  &.has-aside {
+
+    @include mq( $from: desktopSmall ) {
+
+      padding-right: 240px;
+
+    }
+
+  }
+
+}
+
+.type-full {
+
+  .site-content {
+
+    width: 100%;
+
+  }
+
+}
+
+.site-content__title {
+
+  font-family: $titlefont;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 2.2em;
+
+}

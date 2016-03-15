@@ -1,0 +1,49 @@
+@if $use-media == true {
+
+  // !Media
+
+  .media {
+
+    display: block;
+    @extend %grp;
+
+  }
+
+  .media__img,
+  .media__object {
+
+    float: left;
+    margin-right: $base-spacing-unit;
+
+  }
+
+  .media--right {
+
+    float: right;
+    margin-right: 0;
+    margin-left: $base-spacing-unit;
+
+  }
+
+  .media--stacked {
+
+    float: none;
+    text-align: center;
+    margin-right: 0;
+
+  }
+
+  .media__body {
+
+    overflow:hidden;
+
+  }
+
+  .media__body,
+  .media__body > :last-child {
+
+    margin-bottom: 0;
+  
+  }
+
+}

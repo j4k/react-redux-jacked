@@ -1,0 +1,19 @@
+@if $use-lists == true {
+
+// !LISTS
+
+  // Remove vertical spacing from nested lists.
+  // Source: https://github.com/inuitcss/base.lists
+
+  li {
+
+    > ul,
+    > ol {
+
+      margin-bottom:0;
+
+    }
+
+  }
+
+}

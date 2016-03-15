@@ -1,0 +1,21 @@
+@if $use-global == true {
+
+// !GLOBAL
+
+}
+
+@if $use-box-sizing == true {
+
+// !BOX-SIZING
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}
+
+input[type="text"] {
+	box-sizing:         content-box;
+}
+
+}

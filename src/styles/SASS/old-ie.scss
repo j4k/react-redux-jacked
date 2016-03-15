@@ -1,0 +1,8 @@
+// !SERVE OLD IE A STATIC STYLESHEET
+
+// If not using respond.js
+
+$mq-responsive:        false;
+$mq-static-breakpoint: wide; // compiles all mqs below wide E.g. desktop version
+
+@import 'main';

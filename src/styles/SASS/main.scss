@@ -1,0 +1,87 @@
+// !MAIN SASS COMPILER
+
+// !TOC
+// 1.  Defaults
+// 2.  Config
+// 3.  Library
+// 4.  Objects
+// 5.  Styles
+// 6.  Extensions
+// 7.  Themes
+// 8.  Overrides
+
+// !Defaults
+
+@import "Library/defaults"; // defaults
+
+// !Config
+
+@import "Config/setup";     // default overrides
+@import "Config/mq_custom"; // breakpoint widths
+@import "Config/variables"; // styleguide variables (colours, fonts, font-icons)
+
+// !Library
+
+// !--Dependencies
+@import "Library/Dependencies/normalize";     // normalize
+@import "Library/Dependencies/mixin_library"; // mixin library
+@import "Library/Dependencies/mqs";           // MQ mixins
+
+// !--Base Styles
+@import "Library/Base/global";      // *, HTML, BODY (inc. fonts)
+@import "Library/Base/headings";    // H1, H2, H3, H4, H5, H6
+@import "Library/Base/paragraphs";  // P
+@import "Library/Base/blockquotes"; // BLOCKQUOTE, CITE
+@import "Library/Base/images";      // IMG, FIGURE
+@import "Library/Base/forms";       // FORMS, FIELDSET, SELECT, INPUT, TEXTAREA
+@import "Library/Base/lists";       // UL, OL, LI
+@import "Library/Base/tables";      // TABLE, THEAD, TH, TBODY, TR, TD
+
+// !--Core
+@import "Library/mixins";  // mixins
+@import "Library/helpers"; // helper classes
+
+// !Objects
+
+@import "Objects/media";      // media object model (title, text, link, media)
+@import "Objects/button";     // buttons (link, button, input[type="submit"])
+@import "Objects/font_icons"; // default font icon references (social, navigation UI)
+@import "Objects/nav";        // navigation object (inline, vertical)
+
+// !Styles
+
+@import "Styles/global"; // general
+@import "Styles/header"; // header
+@import "Styles/nav";    // nav
+@import "Styles/main";   // main
+@import "Styles/aside";  // aside
+@import "Styles/footer"; // footer
+
+// !--Pages
+//@import "Styles/page-type-xxxxxx";  // pages
+
+// !--Modules
+//@import "Styles/slider"; // breadcrumb [SAMPLE]
+
+// !--Blocks
+//@import "Styles/block-xxxxxx"; // block
+
+
+// !Extensions
+
+//@import "Styles/ext_box";        // box model extended [SAMPLE]
+//@import "Styles/ext_icon_fonts"; // icon font extended [SAMPLE]
+
+// !Themes
+
+//@import "Themes/site";    // root themes
+//@import "Themes/page";    // page themes
+//@import "Themes/modules"; // module themes
+
+// !Overrides (make use of cascade)
+
+//@import "Overrides/ie-8";  // .ie-8 styles
+
+
+// !--Print
+@import "Library/print"; // print styles

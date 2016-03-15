@@ -1,0 +1,35 @@
+// !GLOBAL
+
+// !Fonts
+
+@font-face{
+	font-family:'LeagueGothicRegular';
+	src:url("../fonts/league_gothic-webfont.eot");
+	src:url("../fonts/league_gothic-webfont.eot?iefix") format("eot"), url("../fonts/league_gothic-webfont.woff") format("woff"), url("../fonts/league_gothic-webfont.ttf") format("truetype"), url("../fonts/league_gothic-webfont.svg#webfont6pIjZxGz") format("svg");
+	font-weight:normal;
+	font-style:normal
+}
+
+.site{
+	
+
+	// !Global "greedy" styles in here!
+
+
+
+
+
+
+
+}
+
+// !Layout
+.constrain {
+
+  margin: 0 auto;
+  width: 98%;
+  max-width: 960px;
+
+  @extend %grp;
+
+}

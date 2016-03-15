@@ -1,0 +1,35 @@
+// !FOOTER
+
+.site-footer {
+
+  padding: 1em 0;
+
+  .constrain {
+
+    border-top: 2px solid $cs-grey;
+
+  }
+
+}
+
+.footer__contentinfo {
+
+  @extend %grp;
+  font-size: 0.75em;
+  color: $cs-grey;
+
+  .constrain {
+
+    padding: 0 0.5em;
+
+  }
+
+  p {
+
+    float: left;
+    line-height: 26px;
+
+  }
+
+
+}
