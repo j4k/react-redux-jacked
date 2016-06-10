@@ -37,7 +37,7 @@ export default class RequestFactory {
           headers: this.headers,
           ...options,
         method: method === 'del' ? 'DELETE' : method.toUpperCase()
-    };
+      };
 
       let response;
 
@@ -49,10 +49,10 @@ export default class RequestFactory {
     })
     .then(res => {
 
-        let body;
+      let body;
 
       if (!res.ok) {
-        return res.json().then(err =>{throw err;});
+        return res.json().then( err => {throw err;});
       }
 
       if (opts.headers['Content-Type'] !== 'application/json'
@@ -74,7 +74,7 @@ export default class RequestFactory {
       callback ? callback(null, response, camelCaseObject(body)) : camelCaseObject(body)
     )
     .catch(err => {
-        if (!response || !response.statusText) {
+      if (!response || !response.statusText) {
         if (callback) return callback(err, response || null);
         throw err;
       }
@@ -84,7 +84,7 @@ export default class RequestFactory {
       throw err;
     });
 
-      return request;
+    return request;
 
     }
   }

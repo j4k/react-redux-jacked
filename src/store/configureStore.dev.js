@@ -1,14 +1,32 @@
-//The actual stores are in /reducers.
+/* eslint-disable no-console */
 
-import { createStore } from 'redux';
+//The actual stores are in /reducers.
+import { createStore, applyMiddleware } from 'redux';
 import rootReducer from '../reducers';
+import middleware from '../middleware/middleware';
+
+function logger({ getState }) {
+  return (next) => (action) => {
+    console.log('Will dispatch: ', action);
+
+    // Call the next dispatch method in the middleware chain.
+    let returnValue = next(action);
+
+    console.log('State after dispatch: ', getState());
+
+    // This will likely be the action itself, unless
+    // a middleware further in chain changed it.
+    return returnValue;
+  };
+}
 
 export default function configureStore(initialState) {
   let store;
+
   if (window.devToolsExtension) { //Enable Redux devtools if the extension is installed in developer's browser
-    store = window.devToolsExtension()(createStore)(rootReducer, initialState);
+    store = window.devToolsExtension()(createStore(middleware(logger)))(rootReducer, initialState);
   } else {
-    store = createStore(rootReducer, initialState);
+    store = createStore(middleware(logger))(rootReducer, initialState);
   }
 
   if (module.hot) {
