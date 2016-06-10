@@ -4,6 +4,7 @@
 import webpack from 'webpack';
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import DotEnv from 'webpack-dotenv-plugin';
 
 const developmentEnvironment = 'development' ;
 const productionEnvironment = 'production';
@@ -17,7 +18,11 @@ const getPlugins = function (env) {
 
   const plugins = [
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.DefinePlugin(GLOBALS) //Tells React to build in prod mode. https://facebook.github.io/react/downloads.html
+    new webpack.DefinePlugin(GLOBALS), // Tells React to build in prod mode. https://facebook.github.io/react/downloads.html
+    new DotEnv({
+      sample: './.env.default',
+      path: './.env'
+    })
   ];
 
   switch (env) {
