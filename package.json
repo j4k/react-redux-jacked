@@ -21,7 +21,6 @@
   "dependencies": {
     "connect-history-api-fallback": "1.1.0",
     "lodash": "4.13.1",
-    "object-assign": "4.0.1",
     "react": "15.1.0",
     "react-dom": "15.1.0",
     "react-redux": "4.4.5",
@@ -68,19 +67,6 @@
     "yargs": "3.32.0"
   },
   "keywords:": [
-    "react",
-    "reactjs",
-    "react-router",
-    "hot",
-    "reload",
-    "hmr",
-    "live",
-    "edit",
-    "webpack",
-    "redux",
-    "flux",
-    "boilerplate",
-    "starter"
   ],
   "repository": {
     "type": "git",
