@@ -1,4 +1,4 @@
-function callAPIMiddleware({ dispatch, getState }) {
+export default function callAPIMiddleware({ dispatch, getState }) {
   return next => action => {
     const {
       types,

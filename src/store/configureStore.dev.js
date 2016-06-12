@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
-
-//The actual stores are in /reducers.
-import { createStore, applyMiddleware } from 'redux';
+// The actual stores are in /reducers.
+import { createStore, compose } from 'redux';
 import rootReducer from '../reducers';
 import middleware from '../middleware/middleware';
 
@@ -24,9 +23,14 @@ export default function configureStore(initialState) {
   let store;
 
   if (window.devToolsExtension) { //Enable Redux devtools if the extension is installed in developer's browser
-    store = window.devToolsExtension()(createStore(middleware(logger)))(rootReducer, initialState);
+    store = compose(
+      middleware(logger),
+      window.devToolsExtension()
+    )(createStore)(rootReducer, initialState);
   } else {
-    store = createStore(middleware(logger))(rootReducer, initialState);
+    store = compose(
+      middleware(logger)
+    )(createStore)(rootReducer, initialState);
   }
 
   if (module.hot) {

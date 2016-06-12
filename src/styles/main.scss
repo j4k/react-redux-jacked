@@ -1,5 +1,3 @@
-// !MAIN SASS COMPILER
-
 // !TOC
 // 1.  Defaults
 // 2.  Config
@@ -56,31 +54,3 @@
 @import "Styles/aside";  // aside
 @import "Styles/footer"; // footer
 
-// !--Pages
-//@import "Styles/page-type-xxxxxx";  // pages
-
-// !--Modules
-//@import "Styles/slider"; // breadcrumb [SAMPLE]
-
-// !--Blocks
-//@import "Styles/block-xxxxxx"; // block
-
-
-// !Extensions
-
-//@import "Styles/ext_box";        // box model extended [SAMPLE]
-//@import "Styles/ext_icon_fonts"; // icon font extended [SAMPLE]
-
-// !Themes
-
-//@import "Themes/site";    // root themes
-//@import "Themes/page";    // page themes
-//@import "Themes/modules"; // module themes
-
-// !Overrides (make use of cascade)
-
-//@import "Overrides/ie-8";  // .ie-8 styles
-
-
-// !--Print
-@import "Library/print"; // print styles
