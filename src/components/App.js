@@ -5,7 +5,6 @@ const App = (props) => {
   return (
     <div>
       <IndexLink to="/">Home</IndexLink>
-      <br/>
       {props.children}
     </div>
   );

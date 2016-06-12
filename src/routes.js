@@ -9,6 +9,7 @@ import ErrorPage from './components/ErrorPage.js';
 export default (
     <Route path="/" component={App}>
         <IndexRoute component={BasePage} />
+        <Route path="opps" component={ErrorPage} />
         <Route path="*" component={NotFoundPage} />
     </Route>
 );

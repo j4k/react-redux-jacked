@@ -53,9 +53,11 @@
     "mocha": "2.3.4",
     "node-sass": "3.7.0",
     "parallelshell": "2.0.0",
+    "react-addons-test-utils": "15.1.0",
     "react-transform-catch-errors": "1.0.2",
     "react-transform-hmr": "1.0.4",
     "redbox-react": "1.2.6",
+    "redux-mock-store": "1.1.0",
     "rimraf": "2.5.2",
     "sass-loader": "3.1.2",
     "style-loader": "0.13.1",
@@ -66,8 +68,7 @@
     "webpack-hot-middleware": "2.10.0",
     "yargs": "3.32.0"
   },
-  "keywords:": [
-  ],
+  "keywords:": [],
   "repository": {
     "type": "git",
     "url": "https://github.com/j4k/react-redux-jacked"

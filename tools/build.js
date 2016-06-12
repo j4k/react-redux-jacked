@@ -36,7 +36,7 @@ webpack(webpackConfig).run((err, stats) => {
     }
 
     // If it makes it this far, the build = success
-    console.log('Your app has been compiled in production mode and written to /dist. It\'s ready to go.'.green.bold);
+    console.log('The app has been compiled in production mode and written to /dist. It\'s ready to go.'.green.bold);
 
     return 0;
 });

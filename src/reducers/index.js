@@ -7,12 +7,12 @@ const appReducer = combineReducers({
 
 const rootReducer = (state, action) => {
   if (action.type === 'APP_RESET') {
-    // Only thing required from state is routing for a reset
+    // Only thing required from state is routing for an app reset
     const { routing } = state;
     state = { routing };
   }
 
-  return appReducer(state, action)
+  return appReducer(state, action);
 };
 
 export default rootReducer;

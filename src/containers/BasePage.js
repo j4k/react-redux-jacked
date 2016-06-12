@@ -15,7 +15,7 @@ class BasePage extends Component {
 
   render() {
     return (
-        <div>Test</div>
+        <div class="test-more">Test more</div>
     );
   }
 }
