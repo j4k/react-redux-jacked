@@ -2,11 +2,15 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../actions/actionCreators';
+import { withRouter } from 'react-router';
 
 class BasePage extends Component {
   static propTypes = {
       actions: PropTypes.object.isRequired,
-      appState: PropTypes.object.isRequired
+      appState: PropTypes.object.isRequired,
+      router: PropTypes.shape({
+        push: PropTypes.func.isRequired
+      }).isRequired
   };
 
   render() {
@@ -15,6 +19,8 @@ class BasePage extends Component {
     );
   }
 }
+
+const DecoratedBasePage = withRouter(BasePage);
 
 function mapStateToProps(state) {
     return {
@@ -31,4 +37,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(BasePage);
+)(DecoratedBasePage);
