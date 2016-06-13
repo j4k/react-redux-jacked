@@ -1,46 +1,23 @@
 import React from 'react';
 import cheerio from 'cheerio';
-import BasePage from './BasePage';
-import TestUtils from 'react-addons-test-utils';
+import {BasePage} from './BasePage';
 import assert from 'assert';
 import { expect } from 'chai';
-import configureStore from 'redux-mock-store';
-import thunk from 'redux-thunk';
+import TestUtils from 'react-addons-test-utils';
+import { findDOMNode } from 'react-dom';
 
-const middlewares = [thunk];
-const mockStore = configureStore(middlewares);
+describe('Component::BasePage', () => {
 
-/**
- * Mock out the top level Redux store with all the required
- * methods and have it return the provided state by default.
- * @param {Object} state State to populate in store
- * @return {Object} Mock store
- */
-function createMockStore(state) {
-  return {
-    subscribe: () => {},
-    dispatch: () => {},
-    getState: () => {
-      return {...state};
-    }
-  };
-}
+  let component;
 
-function setup(storeState) {
-  const renderer = TestUtils.createRenderer();
-  renderer.render(<BasePage store={createMockStore(storeState)} />);
-  const output = renderer.getRenderOutput();
-  return output;
-}
+  beforeEach(() => {
+    component = TestUtils.renderIntoDocument(<BasePage />);
+  });
 
-describe('Base Page', function() {
-
-  it('it should include a message', function() {
-    const output = setup({
-      todos: [1, 2, 3]
-    });
-    console.log(output);
-    assert.equal(true, 1);
+  it("renders some text in a box with proper CSS classes", () => {
+    const div = TestUtils.findRenderedDOMComponentWithTag(component, "div");
+    expect(div.innerHTML).to.equal("Test more");
+    assert(div.className, 'test-more');
   });
 
 });
