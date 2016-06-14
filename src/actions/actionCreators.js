@@ -13,4 +13,7 @@ function makeActionCreator(type, ...argNames) {
 /**
  * Standard Action Creators
  */
+
+export const appReset = makeActionCreator(c.APP_RESET);
+
 export const triggerDefaultAction = makeActionCreator(c.DEFAULT_ACTION, 'settings');

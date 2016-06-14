@@ -16,6 +16,7 @@ describe('Component::BasePage', () => {
 
   it("renders some text in a box with proper CSS classes", () => {
     const div = TestUtils.findRenderedDOMComponentWithTag(component, "div");
+
     expect(div.innerHTML).to.equal("Test more");
     assert(div.className, 'test-more');
   });
